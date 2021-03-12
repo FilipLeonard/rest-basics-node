@@ -9,8 +9,7 @@ const { v4: uuidv4 } = require('uuid');
 const feedRoutes = require('./routes/feed');
 const authRoutes = require('./routes/auth');
 
-const MONGODB_URI =
-  'mongodb+srv://leooonard:qwerty789@clusternodecomplete.jg2xr.mongodb.net/messages';
+const MONGODB_URI = `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASSWORD}@clusternodecomplete.jg2xr.mongodb.net/${process.env.MONGO_DEFAULT_DATABASE}`;
 
 const fileStorage = multer.diskStorage({
   destination: (req, file, cb) => {

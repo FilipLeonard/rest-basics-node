@@ -55,11 +55,8 @@ exports.login = async (req, res, next) => {
       throw error;
     }
     // user credentials are valid, generate JWT (JSON Web Token)
-    const token = jwt.sign(
-      { email: user.email, userId: user._id.toString() },
-      'somesupersecretsecretthatisverylong',
-      { expiresIn: '1h' }
-    );
+    const tokenBody = { email: user.email, userId: user._id.toString() };
+    const token = jwt.sign(tokenBody, 'supersecret', { expiresIn: '1h' });
 
     res.status(200).json({
       message: 'User logged in successfully',
