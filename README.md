@@ -1,10 +1,13 @@
-# Node.js REST Posts
+# **Posts** - Node.js REST Api
 
 _the goal of this readme is to summarize the project, not to provide a classical REST Api documentation_
 
 <br/>
 
 This node application is a basic REST Api Server built with Express and is part of [this Udemy Course](https://www.udemy.com/course/nodejs-the-complete-guide/). It provides endpoints for authentication (handled with JWT) and posts management (e.g. retrieval, creation, editing and deletion). The server also opens a `socket.io` connection that emits different posts events.
+
+_[Here](https://github.com/FilipLeonard/rest-basics-node-graphql) is the **graphql** version of this project._  
+_And [here](https://github.com/FilipLeonard/node-shop) is another project built in the same course._
 
 ## General Info
 
